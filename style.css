@@ -43,6 +43,11 @@ a:active {
     padding: 0 15px;
 }
 
+.container--small {
+    max-width: 1000px;
+}
+
+
 /*---------HEADER---------*/
 
 .header {
@@ -241,4 +246,33 @@ main {
 }
 
 .mission__text {
+}
+
+/*--------COMMON----------*/
+
+.common {
+    margin-top: 100px;
+    padding: 50px 0;
+    background: linear-gradient(180deg, #000 -3%, rgba(0, 0, 0, 0.00) 56%, #000 84%), url(./images/bg-scanner.jpg);
+    background-size: cover;
+}
+
+.common__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.common__img {
+}
+
+.common__col {
+    max-width: 410px;
+}
+
+.common__title {
+    margin-bottom: 20px;
+}
+
+.common__text {
 }
