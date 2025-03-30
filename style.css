@@ -7,6 +7,10 @@
     font-weight: 900;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: black;
     color: white;
@@ -321,4 +325,102 @@ a:active {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+@media (max-width: 940px) {
+    .welcome__cta {
+        padding-right: 0;
+    }
+
+    .welcome__img {
+        right: -190px;
+    }
+
+    .cta__text {
+        font-size: 24px;
+    }
+
+    .mission__img {
+        right: 440px;
+    }
+
+    .mission {
+        padding: 150px 0;
+    }
+
+    .common__col, .mission__desc {
+        max-width: 370px;
+    }
+
+    .mission__desk {
+        width: unset;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo {
+        gap: 3px;
+    }
+
+    .logo-img {
+        width: 70px;
+    }
+
+    .logo-text {
+        width: 70px;
+    }
+
+   .header__container {
+       justify-content: space-between;
+       gap: 0;
+   }
+
+   .header__login {
+       display: none;
+   }
+
+   .welcome__row {
+       min-height: 420px;
+   }
+
+   .welcome__container::after {
+       width: 360px;
+       height: 430px;
+       background-image: url("./images/bg-welcome-mobile.svg");
+   }
+
+   .welcome__img {
+       top: -100px;
+       width: 350px;
+       right: 0;
+   }
+
+    .welcome__title {
+        margin-bottom: 25px;
+        font-size: 35px;
+    }
+
+    .welcome__text {
+        padding-left: 0;
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .welcome__text::before, .welcome__text::after {
+        display: none;
+    }
+
+    .cta__img, .footer__cta .cta__img {
+        height: 60px;
+    }
+
+    .cta__links, .footer__cta .cta__links {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .cta {
+        gap: 40px;
+        flex-direction: column;
+    }
 }
