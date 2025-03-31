@@ -206,7 +206,7 @@ a:active {
     transform: rotate(90deg) translate(-43%);
 }
 
-.mission__desk {
+.mission__desc {
     width: 320px;
     margin-left: auto;
 }
@@ -356,8 +356,8 @@ a:active {
         max-width: 370px;
     }
 
-    .mission__desk {
-        width: unset;
+    .mission__desc {
+        /*width: unset;*/
     }
 }
 
@@ -384,7 +384,7 @@ a:active {
     }
 
     .header__login {
-        display: none;
+        /*display: none;*/
     }
 
     .welcome__row {
@@ -404,7 +404,7 @@ a:active {
     }
 
     .welcome__img {
-        top: -100px;
+        top: -80px;
         width: 350px;
         right: 0;
     }
@@ -462,7 +462,7 @@ a:active {
         align-items: center;
     }
 
-    .mission__desk {
+    .mission__desc {
         margin-left: unset;
     }
 
@@ -470,7 +470,7 @@ a:active {
         margin-bottom: 25px;
     }
 
-    .common__col, .mission__desk {
+    .common__col, .mission__desc {
         max-width: unset;
     }
 
@@ -482,8 +482,19 @@ a:active {
         font-size: 16px;
     }
 
-    .common__container {
+    .common {
+        margin-top: 70px;
+        padding: 0;
+        background: none;
+    }
+
+    .common__container, .common:nth-child(even) .container {
         flex-direction: column-reverse;
+        gap: 70px;
+    }
+
+    .scanner {
+        margin-top: 0;
     }
 
     .common__img {
@@ -491,18 +502,26 @@ a:active {
         width: 280px;
     }
 
-    .scanner {
-        background: none;
+    .scanner::before {
+        background: linear-gradient(180deg, #000000 -2%, rgba(0, 0, 0, 0.67) 11%, rgba(0, 0, 0, 0) 55%, #000000 84%), url("./images/bg-scanner.jpg");
     }
 
-    .scanner::before {
+    .code::before {
+        background: linear-gradient(180deg, #000000 -2%, rgba(0, 0, 0, 0.67) 11%, rgba(0, 0, 0, 0) 55%, #000000 84%), url("./images/bg-code.jpg");
+    }
+
+    .common::before {
         content: "";
         display: block;
-        width: 100%;
+        margin-bottom: -100px;
         height: 300px;
-        background: linear-gradient(180deg, #000000 -2%, rgba(0, 0, 0, 0.67) 11%, rgba(0, 0, 0, 0) 55%, #000000 84%;
-        #000000 84%), url("./images/bg-scanner.jpg");
+
+        background-position: center;
         background-size: cover;
+    }
+
+    .common {
+        margin-top: 70px;
     }
 }
 
