@@ -54,7 +54,6 @@ a:active {
 
 /*---------HEADER---------*/
 
-
 .header__container {
     display: flex;
     align-items: center;
@@ -111,7 +110,7 @@ a:active {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    min-height: 345px;
+    min-height: 270px;
 }
 
 .welcome__title {
@@ -141,6 +140,16 @@ a:active {
     background: rgba(96, 92, 234, 0.5);
     filter: blur(50px);
 
+    animation: lighter 2s infinite alternate;
+}
+
+@keyframes lighter {
+    0% {
+        background: rgba(96, 92, 234, 0.3);
+    }
+    100% {
+        background: rgba(96, 92, 234, 0.7);
+    }
 }
 
 .welcome__text::after {
@@ -191,7 +200,7 @@ a:active {
 
 .mission {
     position: relative;
-    padding: 150px 0px;
+    padding: 150px 0;
 }
 
 .mission__container {
@@ -291,6 +300,7 @@ a:active {
 }
 
 .footer__cta {
+    display: flex;
     flex-direction: column;
     gap: 30px;
     margin-bottom: 125px;
@@ -358,6 +368,7 @@ a:active {
 
     .mission__desc {
         /*width: unset;*/
+        width: 270px;
     }
 }
 
@@ -439,7 +450,7 @@ a:active {
     }
 
     .mission {
-      padding: 50px 0 0;
+        padding: 50px 0 0;
     }
 
     .mission__title::after {
@@ -519,10 +530,6 @@ a:active {
         background-position: center;
         background-size: cover;
     }
-
-    .common {
-        margin-top: 70px;
-    }
 }
 
 @media (max-width: 520px) {
@@ -536,5 +543,27 @@ a:active {
 
     .header__login {
         font-size: 14px;
+    }
+
+    .footer {
+        padding: 70px 0 30px;
+    }
+
+    .footer__cta {
+        margin-bottom: 70px;
+    }
+
+    .footer__row {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .footer__contact {
+        margin-bottom: 10px;
+    }
+
+    .second__row {
+        min-height: 270px;
     }
 }
